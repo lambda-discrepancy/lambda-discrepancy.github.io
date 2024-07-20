@@ -105,3 +105,20 @@ So to recap: (1) λ-discrepancy can detect partial observability; (2) reducing i
 ![image](images/learning-curves.png)
 
 Check out the full [paper](https://arxiv.org/pdf/2407.07333) to learn more!
+
+## Citation
+
+<pre class="bibtex">
+@article{allenkirtlandtao2024lambdadiscrep,
+  title   = {Mitigating Partial Observability in Sequential Decision Processes via the Lambda Discrepancy},
+  author  = {Allen, Cameron and Kirtland, Aaron and Tao, Ruo Yu and Lobel, Sam and Scott, Daniel and Petrocelli, Nicholas and Gottesman, Omer and Parr, Ronald and Littman, Michael L. and Konidaris, George},
+  journal = {arXiv},
+  eid     = {2407.07333},
+  year    = {2024}
+}
+</pre>
+<br />
+
+We acknowledge and thank Saket Tiwari, Anita de Mello Koch, Sam Musker, Brad Knox, Stuart Russell, and our colleagues at Brown University and UC Berkeley for their valuable advice and discussions towards completing this work. We also thank our reviewers from NeurIPS'23 and ICLR'24 for comments on earlier drafts.
+
+This work was generously supported under NSF grant 1955361 and CAREER grant 1844960 to George Konidaris, NSF fellowships to Aaron Kirtland and Sam Lobel, ONR grant N00014-22-1-2592, a gift from Open Philanthropy to the Center for Human-Compatible AI at Berkeley, and an AI2050 Senior Fellowship for Stuart Russell from the Schmidt Fund for Strategic Innovation.

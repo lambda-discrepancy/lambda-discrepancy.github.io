@@ -1720,3 +1720,16 @@ button {
 button div {
     vertical-align: middle;
 }
+
+.bibtex {
+    border: solid 1px black !important;
+    background-color: #ddd;
+    box-shadow: inset 1px 1px #999;
+    border-radius: 15px;
+    padding: 1em 1em;
+    overflow: auto;
+    font-size: .8em;
+    line-height: 1em;
+    white-space: pre-wrap;
+    line-height: 140%;
+}
