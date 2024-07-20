@@ -45,3 +45,63 @@ layout: default
     </button>
   </a>
 </div>
+
+## Paper Summary
+
+RL in POMDPs is hard because you need memory. Remembering *everything* is expensive, and RNNs can only get you so far applied naively.
+
+In this paper, we introduce a theory-backed loss function that greatly improves RNN performance!
+
+{: align="center"}
+![image](images/pacman.gif)
+
+The key insight is to use two value functions. In POMDPs, temporal difference (TD) and Monte Carlo (MC) value estimates can look very different. We call this mismatch the λ-discrepancy and we use it to detect partial observability.
+
+<!-- $$ \Lambda := \| V^\pi_\mathrm{TD} - V^\pi_\mathrm{MC}\|$${: font-size:huge} -->
+{: align="center"}
+![image](images/ld-def.png)
+
+Here's a quick example. Imagine you’re stuck inside this T-maze. If you can reach the +1, you win, and -1 you lose, but all you see is the current square. Without a map, how can you decide which way to go from the junction?
+
+{: align="center"}
+![image](images/t-maze.gif)
+
+If you remember your whole history, you might notice the starting blue/red observation reveals the optimal action. But in general your history might be really long, so you only want to remember what you absolutely must.
+
+{: align="center"}
+![image](images/t-maze-memory.png)
+
+How do we know if we need memory? This is where the value functions come in!
+
+TD and MC have a λ-discrepancy in the T-maze, because TD uses bootstrapping (which makes an implicit Markov assumption), while MC computes a simple average.
+
+{: align="center"}
+![image](images/t-maze-td-mc.png)
+
+We can use the λ-discrepancy to detect partial observability. And it’s a very reliable signal!
+
+We prove that if *some* policy has λ-discrepancy, then *almost all* policies will. Meanwhile, there is never a discrepancy for MDPs. (See the [paper](https://arxiv.org/pdf/2407.07333) for the proofs.)
+
+Okay, math is great, but how do we find a λ-discrepancy in practice? It's actually super simple: just train two value functions and check the difference between them!
+
+(Technically, we can compare TD(λ) for any two different λ values.)
+
+{: align="center"}
+![image](images/arch-super-simple.png)
+
+If we use an RNN, we can learn not just *when* we need memory, but also *what* state information to remember! All we do is minimize the λ-discrepancy while we train the value functions. And we can even train a policy at the same time!
+
+{: align="center"}
+![image](images/arch-full.png)
+
+We also trained a probe to reconstruct the PacMan dots from the agent’s memory. Guess which agent had an easier time with this… Yep! The λ-discrepancy agent knows where it has been, while the normal RNN agent basically has no idea.
+
+{: align="center"}
+![image](images/memory-viz.gif)
+
+So to recap: (1) λ-discrepancy can detect partial observability; (2) reducing it leads to memories that support better policies; and (3) it significantly improves performance on challenging POMDPs.
+
+{: align="center"}
+![image](images/learning-curves.png)
+
+Check out the full [paper](https://arxiv.org/pdf/2407.07333) to learn more!
