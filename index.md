@@ -1,5 +1,5 @@
 ---
-title: Mitigating Partial Observability in Sequential Decision Processes via the Lambda Discrepancy
+title: Lambda Discrepancy
 layout: default
 ---
 
