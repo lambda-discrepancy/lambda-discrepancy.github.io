@@ -57,7 +57,6 @@ In this paper, we introduce a theory-backed loss function that greatly improves 
 
 The key insight is to use two value functions. In POMDPs, temporal difference (TD) and Monte Carlo (MC) value estimates can look very different. We call this mismatch the λ-discrepancy and we use it to detect partial observability.
 
-<!-- $$ \Lambda := \| V^\pi_\mathrm{TD} - V^\pi_\mathrm{MC}\|$${: font-size:huge} -->
 {: align="center"}
 ![image](images/ld-def.png)
 

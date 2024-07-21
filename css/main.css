@@ -241,7 +241,7 @@ object {
 
 img,
 video {
-    max-width: 100%;
+    max-width: 620px;
     height: auto
 }
 
@@ -1359,7 +1359,7 @@ strong {
 img {
     position: relative;
     margin: 0 auto;
-    max-width: 739px;
+    max-width: 620px;
     padding: 5px;
     margin: 10px 0 10px 0;
     border: 1px solid #ebebeb;
@@ -1496,7 +1496,7 @@ kbd {
 
 .inner {
     position: relative;
-    max-width: 90%;
+    max-width: 620px;
     padding: 20px 10px;
     margin: 0 auto
 }
