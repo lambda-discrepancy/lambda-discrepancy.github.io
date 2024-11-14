@@ -46,6 +46,10 @@ layout: default
   </a>
 </div>
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mtGZOdiqkMI?si=Zyo7-4KML7EG3zW-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+&nbsp;
+
 ## Paper Summary
 
 RL in POMDPs is hard because you need memory. Remembering *everything* is expensive, and RNNs can only get you so far applied naively.
