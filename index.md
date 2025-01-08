@@ -112,12 +112,12 @@ Check out the full [paper](https://arxiv.org/pdf/2407.07333) to learn more!
 ## Citation
 
 <pre class="bibtex">
-@article{allenkirtlandtao2024lambdadiscrep,
-  title   = {Mitigating Partial Observability in Sequential Decision Processes via the Lambda Discrepancy},
-  author  = {Allen, Cameron and Kirtland, Aaron and Tao, Ruo Yu and Lobel, Sam and Scott, Daniel and Petrocelli, Nicholas and Gottesman, Omer and Parr, Ronald and Littman, Michael L. and Konidaris, George},
-  journal = {arXiv},
-  eid     = {2407.07333},
-  year    = {2024}
+@inproceedings{allenkirtlandtao2024lambdadiscrep,
+  title     = {Mitigating Partial Observability in Sequential Decision Processes via the Lambda Discrepancy},
+  author    = {Allen, Cameron and Kirtland, Aaron and Tao, Ruo Yu and Lobel, Sam and Scott, Daniel and Petrocelli, Nicholas and Gottesman, Omer and Parr, Ronald and Littman, Michael L. and Konidaris, George},
+  booktitle = {Advances in Neural Information Processing Systems},
+  volume    = {37},
+  year      = {2024}
 }
 </pre>
 <br />
